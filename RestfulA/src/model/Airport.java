@@ -1,5 +1,9 @@
 package model;
 
+/** This class is currently unused.
+ * 
+ * @author Viet Nguyen
+ */
 public class Airport {
 
 	private String name;

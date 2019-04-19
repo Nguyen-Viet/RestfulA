@@ -19,6 +19,11 @@ import org.junit.jupiter.api.Test;
 import model.MyNumber;
 import services.MathServices;
 
+/**
+ * 
+ * @author Viet Nguyen
+ *
+ */
 class MathServicesTest extends JerseyClient{
 
 	private int n1, n2, value;
@@ -39,9 +44,11 @@ class MathServicesTest extends JerseyClient{
 
 	@Test
 	void testAddNumberGET_ValidCreation_Pass() {
-		String response = target(uri+"?n1=1&n2=2").request().get(String.class);
-		int num = number.getValue();
+		String response = target(uri+"?n1=1&n2=2")
+							.request()
+							.get(String.class);
 		
+		int num = number.getValue();
 		JSONObject expected = new JSONObject();
 		expected.put("value", num);
 		
@@ -52,13 +59,12 @@ class MathServicesTest extends JerseyClient{
 	@Test
 	void testAddNumberPOST() {
 	    Response response = target(uri)
-	    						.request()
-	    						.post(Entity.entity(number.toString(), "application/x-www-form-urlencoded"));
+	    					.request()
+	    					.post(Entity.entity(number.toString(), "application/x-www-form-urlencoded"));
 	    
-		System.out.println(response.getStatus());
 	    
 	    assertEquals("Http Response is 200 ", 200, response.getStatus());
 	    
 	}
 
-}
+}//end Class

@@ -1,6 +1,10 @@
 package model;
 
-
+/** An Object to represent a numeric value.
+ * 
+ * @author VietN
+ *
+ */
 public class MyNumber {
 
 	private int value;

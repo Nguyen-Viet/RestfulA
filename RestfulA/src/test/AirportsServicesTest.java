@@ -9,7 +9,11 @@ import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.client.JerseyClient;
 
-
+/**
+ * 
+ * @author Viet Nguyen
+ *
+ */
 class AirportsServicesTest extends JerseyClient{
 
 	private String uri;
@@ -28,4 +32,4 @@ class AirportsServicesTest extends JerseyClient{
 	
 	}
 
-}
+}//end Class
